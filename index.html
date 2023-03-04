@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Klexxy Store</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="area">
+    <div class="neverending">
+      <div class="container">
+        <div class="box">
+          <span></span>
+            <div class="content">
+              <h2>About Me</h2>
+              <p>Learn more about me and what I did in the past</p>
+              <a href="#about">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+          <span></span>
+            <div class="content">
+              <h2>About my products</h2>
+              <p>Learn about our Products and why we chose them</p>
+              <a href="#learn">Read More</a>
+            </div>
+        </div>
+        <div class="box">
+          <span></span>
+            <div class="content">
+              <h2>Products</h2>
+              <p>See what high quality products I sell</p>
+              <a href="#product">Read More</a>
+           </div>
+        </div>
+    </div>
+
+    <div id="about">
+      <div style="height: 180px;"></div>
+      <p style="text-align: center; background: -webkit-linear-gradient(left, #ff00d885, #ff0058); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 60px; font-weight: bold;">About Me</p>
+        <div class="row">
+          <div class="container">
+            <div class="box">
+              <span></span>
+                <div class="content">
+                  <p>Description</p>
+                </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="box">
+              <span></span>
+                <div class="content">
+                  <p>Description</p>
+                </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="box">
+              <span></span>
+                <div class="content">
+                  <p>Description</p>
+                </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="box">
+              <span></span>
+                <div class="content">
+                  <p>Description</p>
+                </div>
+            </div>
+          </div>
+       </div>
+    </div>
+
+
+    <div id="learn">
+      <div style="height: 150px;"></div>
+      <p style="text-align: center; background: -webkit-linear-gradient(left, #ff00d885, #ff0058); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 60px; font-weight: bold;">Why we chose these Products</p>
+        <div class="row">
+  <div class="container" style="margin-left: 140px;">
+    <div class="btn1" style="margin-right: 80px;"><a>Description</a></div>
+    <div class="btn1" style="margin-right: 80px;"><a>Description</a></div>
+    <div class="btn1" style="margin-right: 80px;"><a>Description</a></div>
+  </div>
+       
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="product">
+  <div style="height: 170px;"></div>
+  <p style="text-align: center; background: -webkit-linear-gradient(left, #ff00d885, #ff0058); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 60px; font-weight: bold;">Products</p>
+  <div style="height: 100px;"></div>
+
+  <div class="row" style="display: flex;align-items: center;">
+            <div class="nft">
+    <div class='main'>
+      <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+      <h2>skill 1</h2>
+      <p class='description'>Description</p>
+      <div class='tokenInfo'>
+        <div class="price">
+          <ins></ins>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+
+    <div class="nft">
+    <div class='main'>
+      <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+      <h2>skill 2</h2>
+      <p class='description'>Description</p>
+      <div class='tokenInfo'>
+        <div class="price">
+          <ins></ins>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+
+           <div class="nft">
+    <div class='main'>
+      <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+      <h2>skill 3</h2>
+      <p class='description'>Description</p>
+      <div class='tokenInfo'>
+        <div class="price">
+          <ins></ins>
+
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+  const menuLinks = document.querySelectorAll('.content');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetSectionId = event.target.getAttribute('href');
+        const targetSection = document.querySelector(targetSectionId);
+        targetSection.scrollIntoView({
+        behavior: 'smooth'
+        });
+      });
+   });
+</script>
+
+<style>
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn {
+    margin-bottom: 10px;
+  }
+  .neverending .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .box {
+    margin-bottom: 30px;
+  }
+  #gameplay .row {
+    flex-direction: column;
+  }
+  #why .row {
+    flex-direction: column;
+  }
+  #game .row {
+    flex-direction: column;
+  }
+  .container {
+    margin: 0;
+  }
+}
+
+</style>
+</body>
+</html>
